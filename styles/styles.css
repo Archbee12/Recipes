@@ -26,7 +26,10 @@ body {
   min-height: 100vh;
 }
 
+.app-header, .app-footer {
+  background-color: #2c3e50;
 
+}
 
 header {
   text-align: center;
@@ -36,7 +39,7 @@ header {
 /* Header */
 /* Header */
 .app-header {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   padding: 15px 25px;
   display: flex;
   justify-content: space-between;
@@ -46,7 +49,7 @@ header {
 
 .app-header a {
   margin: 0;
-  color: #333;
+  color: #ecf0f1;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -119,7 +122,8 @@ header {
   /* margin-left: 20px; */
   text-decoration: none;
   font-size: 0.95rem;
-  color: #3498db;
+  color: #ecf0f1;
+;
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -128,16 +132,6 @@ header {
   color: #2980b9;
 }
 
-
-/* Footer */
-.app-footer {
-  background-color: #f8f8f8;
-  padding: 10px 25px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  font-size: 0.85rem;
-  color: #666;
-}
 
 h1 {
   font-size: 2rem;
@@ -149,6 +143,7 @@ form {
   display: flex;
   justify-content: center;
   /* gap: 10px; */
+  margin-top: 1rem;
 }
 
 input {
@@ -176,6 +171,8 @@ button:hover {
 main {
   padding: 10px 20px;
   flex: 1;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Welcome Cards Introductory */
@@ -205,8 +202,6 @@ main {
 
 #results {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
 }
 
 .recipe-card:hover {
@@ -526,4 +521,40 @@ main {
 
 #clear-history-btn:hover {
   background: #c82333;
+}
+
+/* Footer */
+
+.app-footer {
+  color: #ecf0f1;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  border-top: 4px solid #e67e22;
+}
+
+.footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer .right {
+  text-align: right;
+}
+
+.footer .right p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+#currentYear {
+  font-weight: bold;
+}
+
+#lastModified {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #bdc3c7;
 }

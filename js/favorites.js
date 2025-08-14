@@ -1,5 +1,6 @@
 import { getFavorites } from './favorites.mjs';
 import { displayRecipes } from './displayRecipe.mjs';
+import { attachRecipeListeners } from './utils.mjs';
 
 // const results = document.getElementById('results');
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       displayRecipes(favorites, results, 'Saved Favorites');
+      attachRecipeListeners();
     });
   }
 });

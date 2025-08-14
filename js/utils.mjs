@@ -4,6 +4,7 @@ import { saveFavorite, removeFavorite, isFavorite, getFavorites } from './favori
 import { showAlert } from './showAlert.mjs';
 
 export function attachRecipeListeners() {
+  
   document.querySelectorAll('.ingredients-btn').forEach(button => {
     button.addEventListener('click', async () => {
       const recipeId = button.dataset.id;
@@ -24,12 +25,14 @@ export function attachRecipeListeners() {
       summary: button.dataset.summary
     };
 
+    
+
     if (isFavorite(recipe.id)) {
       button.textContent = '💔 Unsave';
     }
 
     button.addEventListener('click', () => {
-      const isInFavorites = document.getElementById("favorites-link");
+      const isInFavorites = document.getElementById("favorites-recipes");
 
       if (isFavorite(recipe.id)) {
         removeFavorite(recipe.id);
@@ -40,6 +43,7 @@ export function attachRecipeListeners() {
           const updatedFavorites = getFavorites();
           const results = document.getElementById("results");
           displayRecipes(updatedFavorites, results);
+          attachRecipeListeners();
         }
       } else {
         saveFavorite(recipe);

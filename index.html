@@ -17,10 +17,6 @@
         ☰
       </button>
 
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Search for recipes..." required />
-        <button type="submit">🍳</button>
-      </form>
       <nav class="nav-links">
         <a href="favorite.html">❤️ Favorites</a>
         <a href="nutrition.html">📊 Nutrition</a>
@@ -33,6 +29,12 @@
       <p>Search, save, and explore delicious recipes from around the world.</p>
       <section id="intro-cards" class="card-grid">
         <!-- Cards will be injected here -->
+      </section>
+      <section id="search-cards">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Search for recipes..." required />
+          <button type="submit">🍳</button>
+        </form>
       </section>
       <section id="results"></section>
       <div id="modal" class="modal hidden"></div>

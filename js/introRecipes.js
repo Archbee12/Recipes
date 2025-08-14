@@ -7,12 +7,12 @@ export const introRecipes = [
   },
   {
     "title": "Potato Frittata Muffin",
-    "description": "A savory, bite-sized twist on the classic frittata — packed with shredded potatoes, eggs, cheese, and herbs. Perfect for breakfast on the go or a protein-rich snack.",
+    "description": "A savory, bite-sized twist on the classic frittata packed with shredded potatoes, eggs, cheese, and herbs. ",
     "image": "/Recipes/images/fitata.webp"
   },
   {
     "title": "Burger",
-    "description": "A juicy grilled patty tucked between soft buns, layered with fresh lettuce, tomato, cheese, and your favorite condiments. The ultimate comfort food, customizable to your cravings.",
+    "description": "A juicy grilled patty tucked between soft buns, layered with fresh lettuce, tomato, cheese, and your favorite condiments.",
     "image": "/Recipes/images/burger.webp"
   },
   {
