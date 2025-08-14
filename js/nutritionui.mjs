@@ -1,4 +1,5 @@
 import { fetchNutrition } from './nutritionapi.mjs';
+import { renderLoader } from './utils.mjs';
 
 export function renderNutritionCard(container) {
   container.innerHTML = `
@@ -18,15 +19,16 @@ export function renderNutritionCard(container) {
   const output = container.querySelector('#nutrition-results');
 
   const analyze = async (query, target = output) => {
-    target.innerHTML = `<p>Loading nutrition data...</p>`;
-    const nutritionData = await fetchNutrition(query);
-    saveQuery(query);
-  
+    target.innerHTML = renderLoader();
 
-  if (nutritionData.length === 0) {
-    target.innerHTML = '<p>No nutrition data found.</p>';
-    return;
-  }
+    const nutritionData = await fetchNutrition(query);
+
+    if (!nutritionData || nutritionData.length === 0) {
+      target.innerHTML = '<p>No nutrition data found.</p>';
+      return;
+    }
+
+    saveQuery(query);
 
     target.innerHTML = nutritionData.map(item => `
       <div class="nutrition-card">
@@ -91,17 +93,6 @@ function renderHistory(container, callback) {
         resultContainer.innerHTML = '';
         return;
       }
-
-      // if (isVisible) {
-      //   resultContainer.classList.remove('expanded');
-      //   setTimeout(() => {
-      //     resultContainer.innerHTML = '';
-      //   }, 300); // wait for animation to finish
-      //   return;
-      // }
-
-      // resultContainer.classList.add('expanded');
-      // resultContainer.innerHTML = '<p>Loading...</p>';
 
       resultContainer.classList.remove('hidden');
       resultContainer.innerHTML = '<p>Loading...</p>';

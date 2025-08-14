@@ -134,3 +134,10 @@ export function showModal(title, ingredients, instructions) {
   });
 }
 
+export function renderLoader(height = 200) {
+  return `
+    <div class="loader-wrapper" style="display: flex; justify-content: center; align-items: center; height: ${height}px;">
+      <div class="loader"></div>
+    </div>
+  `;
+}

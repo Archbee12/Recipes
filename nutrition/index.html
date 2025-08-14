@@ -4,45 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recipe Finder</title>
-  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/styles.css">
   <script src="/js/nutrition.js" type="module"></script>
   <script src="/js/navigation.js" type="module"></script>
 
 
 </head>
 <body>
-  <header class="app-header">
-    <a href="/index.html">🍳 Recipe Finder</a>
-    <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
-      ☰
-    </button>
+  <div class="wrapper">
+    <header class="app-header">
+      <a href="/index.html">🍳 Recipe Finder</a>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-    <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search for recipes..." required />
-      <button type="submit">Search</button>
-    </form>
-    <nav class="nav-links">
-      <a href="/favorite/index.html">❤️ Favorites</a>
-      <a href="index.html">📊 Nutrition</a>
-    </nav>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search for recipes..." required />
+        <button type="submit">Search</button>
+      </form>
+      <nav class="nav-links">
+        <a href="/favorite/index.html">❤️ Favorites</a>
+        <a href="index.html">📊 Nutrition</a>
+      </nav>
 
-  </header>
-  <main>
-    <section id="nutrition-link">
-      <div class="nutrition-intro-card">
-        <h2>🍏 Nutrition Analyzer</h2>
-        <p>Enter a meal or list of ingredients (e.g. <em>"2 eggs and toast"</em>) to get a full nutrition breakdown.</p>
-        <form id="nutrition-form">
-          <input type="text" id="nutrition-input" placeholder="e.g. 1 banana and 1 cup of milk" required />
-          <button type="submit">Analyze</button>
-        </form>
-        <div id="nutrition-results"></div>
+    </header>
+    <main>
+      <section id="nutrition-link">
+        <div class="nutrition-intro-card">
+          <h2>🍏 Nutrition Analyzer</h2>
+          <p>Enter a meal or list of ingredients (e.g. <em>"2 eggs and toast"</em>) to get a full nutrition breakdown.</p>
+          <form id="nutrition-form">
+            <input type="text" id="nutrition-input" placeholder="e.g. 1 banana and 1 cup of milk" required />
+            <button type="submit">Analyze</button>
+          </form>
+          <div id="nutrition-results"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <div class="footer">
+        <div class="right">
+          <p>WDD330 Class Project</p>
+          <p>Deborah Sarah Okon<br>
+          <p>&copy;<span id="currentYear"> </span> Recipe Finder</p>
+          <p id="lastModified"> </p>
+          <p>View Site Video</p>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer class="app-footer">
-    <p>Made with ❤️ by Debbie</p>
-  </footer>
-
+    </footer>
+  </div>
 </body>
 </html>

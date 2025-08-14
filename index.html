@@ -10,36 +10,45 @@
 
 </head>
 <body>
-  <header class="app-header">
-    <a href="/index.html">🍳 Recipe Finder</a>
-    <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
-      ☰
-    </button>
+  <div class="wrapper">
+    <header class="app-header">
+      <a href="index.html">🍳 Recipe Finder</a>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-    <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search for recipes..." required />
-      <button type="submit">🍳</button>
-    </form>
-    <nav class="nav-links">
-      <a href="favorite/index.html">❤️ Favorites</a>
-      <a href="nutrition/index.html">📊 Nutrition</a>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search for recipes..." required />
+        <button type="submit">🍳</button>
+      </form>
+      <nav class="nav-links">
+        <a href="favorite/index.html">❤️ Favorites</a>
+        <a href="nutrition/index.html">📊 Nutrition</a>
 
-    </nav>
+      </nav>
 
-  </header>
-  <main>
-    <h2>Welcome to Recipe Finder 🍳</h2>
-    <p>Search, save, and explore delicious recipes from around the world.</p>
-    <section id="intro-cards" class="card-grid">
-      <!-- Cards will be injected here -->
-    </section>
-    <section id="results"></section>
-    <div id="modal" class="modal hidden"></div>
-    <div id="alert" class="alert hidden"></div>
-  </main>
-  <footer class="app-footer">
-    <p>Made with ❤️ by Debbie</p>
-  </footer>
-
+    </header>
+    <main>
+      <h2>Welcome to Recipe Finder 🍳</h2>
+      <p>Search, save, and explore delicious recipes from around the world.</p>
+      <section id="intro-cards" class="card-grid">
+        <!-- Cards will be injected here -->
+      </section>
+      <section id="results"></section>
+      <div id="modal" class="modal hidden"></div>
+      <div id="alert" class="alert hidden"></div>
+    </main>
+    <footer class="app-footer">
+      <div class="footer">
+        <div class="right">
+          <p>WDD330 Class Project</p>
+          <p>Deborah Sarah Okon<br>
+          <p>&copy;<span id="currentYear"> </span> Recipe Finder</p>
+          <p id="lastModified"> </p>
+          <p>View Site Video</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
