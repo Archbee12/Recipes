@@ -1,4 +1,4 @@
-import { getFavorites, saveFavorite } from './favorites.mjs';
+import { getFavorites } from './favorites.mjs';
 import { displayRecipes } from './displayRecipe.mjs';
 
 // const results = document.getElementById('results');
