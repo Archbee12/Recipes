@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Spaghetti Carbonara",
+    "image": "https://via.placeholder.com/300x200?text=Carbonara",
+    "description": "Classic Italian pasta with creamy sauce and pancetta."
+  },
+  {
+    "title": "Potato Frittata Muffin",
+    "description": "A savory, bite-sized twist on the classic frittata — packed with shredded potatoes, eggs, cheese, and herbs. Perfect for breakfast on the go or a protein-rich snack.",
+    "image": "https://www.dadwithapan.com/wp-content/uploads/2018/04/cheesy-spinach-potato-frittata-muffins-5.jpg"
+  },
+  {
+    "title": "Burger",
+    "description": "A juicy grilled patty tucked between soft buns, layered with fresh lettuce, tomato, cheese, and your favorite condiments. The ultimate comfort food, customizable to your cravings.",
+    "image": "https://themodernproper.com/storage/images/2021/07/Classic-Cheeseburger-with-Secret-Sauce-11.jpg"
+  },
+  {
+    "title": "Berry Smoothie Bowl",
+    "image": "https://via.placeholder.com/300x200?text=Smoothie+Bowl",
+    "description": "Refreshing and nutritious bowl topped with fresh fruits."
+  }
+]

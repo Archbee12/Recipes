@@ -1,0 +1,502 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Header */
+/* Header */
+.app-header {
+  background-color: #f8f8f8;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-header a {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.app-header a {
+  text-decoration: none;
+}
+
+/* Base styles */
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px 20px; */
+  /* background: #fff; */
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 680px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid black;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #search-form {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 10px;
+    width: 300px;
+  }
+}
+
+/* Navigation links */
+.nav-links a {
+  /* margin-left: 20px; */
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #3498db;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2980b9;
+}
+
+
+/* Footer */
+.app-footer {
+  background-color: #f8f8f8;
+  padding: 10px 25px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+form {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 10px;
+  font-size: 1rem;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff5722;
+}
+
+main {
+  padding: 10px 20px;
+}
+
+/* Welcome Cards Introductory */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-content {
+  padding: 1rem;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-content {
+  padding: 15px;
+}
+
+.recipe-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.recipe-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.save-btn {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Modal Dialog */
+/* Modal backdrop */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.modal-content span {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-content span:hover {
+  color: #e74c3c;
+}
+
+/* Title */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Ingredient list */
+.modal-content ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Hide modal */
+.hidden {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide-in animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply slide-in to modal content */
+.modal-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideInUp 0.4s ease-out;
+}
+
+/* Tab Styling */
+.tab-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.tab.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+/* Loader Spinner */
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Alert Styling */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+  z-index: 1000;
+}
+
+.alert.show {
+  opacity: 1;
+  top: 40px;
+}
+
+.alert.success {
+  background: #28a745;
+}
+
+.alert.error {
+  background: #dc3545;
+}
+
+/* Nutrition Stylign */
+
+.nutrition-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 1rem;
+  border-radius: 6px;
+}
+.nutrition-card h3 {
+  margin-top: 0;
+}
+.nutrition-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+.nutrition-card li {
+  margin-bottom: 5px;
+}
+
+/* History Styling */
+.nutrition-history {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.nutrition-history h4 {
+  margin-bottom: 10px;
+}
+
+.nutrition-history ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nutrition-history li {
+  padding: 5px;
+  background: #eee;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nutrition-history li:hover {
+  background: #ddd;
+}
+
+/* Accordion Styling */
+.nutrition-result {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.nutrition-result.hidden {
+  display: none;
+}
+
+.accordion-trigger {
+  padding: 8px;
+  background: #eee;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.accordion-trigger:hover {
+  background: #ddd;
+}
+
+/* Clear History Styling */
+
+#clear-history-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clear-history-btn:hover {
+  background: #c82333;
+}
