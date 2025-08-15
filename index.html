@@ -27,15 +27,16 @@
     <main>
       <h2>Welcome to Recipe Finder 🍳</h2>
       <p>Search, save, and explore delicious recipes from around the world.</p>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search for recipes..." required />
+        <button type="submit">🍳</button>
+      </form>
       <section id="intro-cards" class="card-grid">
         <!-- Cards will be injected here -->
       </section>
       <section id="search-cards">
         <h2>Find your favorite meal recipe</h2>
-        <form id="search-form">
-          <input type="text" id="search-input" placeholder="Search for recipes..." required />
-          <button type="submit">🍳</button>
-        </form>
+        
       </section>
       <section id="results"></section>
       <div id="modal" class="modal hidden"></div>
