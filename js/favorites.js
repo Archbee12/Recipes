@@ -5,20 +5,17 @@ import { attachRecipeListeners } from './utils.mjs';
 // const results = document.getElementById('results');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const favBtn = document.getElementById('favorites-recipes');
-  if (favBtn) {
-    favBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const favorites = getFavorites();
+  const favoritesSection = document.getElementById('favorites-recipes');
+  const results = document.getElementById('results');
 
-      const results = document.getElementById('results');
-      if (favorites.length === 0) {
-        results.innerHTML = '<p>No favorites saved yet.</p>';
-        return;
-      }
+  if (favoritesSection && results) {
+    const favorites = getFavorites();
 
+    if (favorites.length === 0) {
+      results.innerHTML = '<p>No favorites saved yet.</p>';
+    } else {
       displayRecipes(favorites, results, 'Saved Favorites');
-      attachRecipeListeners();
-    });
+      attachRecipeListeners(); // So buttons like "Unsave" work
+    }
   }
 });
