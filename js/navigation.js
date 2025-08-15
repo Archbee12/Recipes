@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const currentYear = document.querySelector("#currentYear");
-const lastModified = document.lastModified;
+const lastModified = document.querySelector("#lastModified");
+
 
 // use the date object
 const today = new Date();

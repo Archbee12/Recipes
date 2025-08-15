@@ -4,7 +4,6 @@ import { renderLoader } from './utils.mjs';
 export function renderNutritionCard(container) {
   container.innerHTML = `
     <div class="nutrition-intro-card">
-      <h2>🍏 Nutrition Analyzer</h2>
       <p>Enter a meal or list of ingredients (e.g. <em>"2 eggs and toast"</em>) to get a full nutrition breakdown.</p>
       <form id="nutrition-form">
         <input type="text" id="nutrition-input" placeholder="e.g. 1 banana and 1 cup of milk" required />
