@@ -17,7 +17,7 @@ export const introRecipes = [
   },
   {
     title: 'Berry Smoothie Bowl',
-    image: "/recipes/images/berry.webp",
+    image: "/wdd330recipes/images/berry.webp",
     description: 'Refreshing and nutritious bowl topped with fresh fruits.'
   }
 ];
